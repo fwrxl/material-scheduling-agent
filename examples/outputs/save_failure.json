@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "save_failure",
+  "request_id": "REQ-SAVE-FAIL-001",
+  "material_id": "M06",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "task_status": "failed",
+  "review_status": "passed",
+  "risk_reasons": [],
+  "requested_start": "2027-04-10T19:00:00+08:00",
+  "suggested_start": "2027-04-10T19:00:00+08:00",
+  "pending_confirmations": [],
+  "draft": {
+    "save_status": "failed",
+    "draft_id": null,
+    "message": "模拟存储服务不可用"
+  },
+  "publication_status": "not_saved",
+  "message": "草稿保存失败：模拟存储服务不可用",
+  "usage": {
+    "model_steps": 5,
+    "tool_calls": 5
+  },
+  "termination_reason": "finished"
+}

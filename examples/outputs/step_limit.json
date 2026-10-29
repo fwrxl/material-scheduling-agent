@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "step_limit",
+  "request_id": "REQ-STEP-LIMIT-001",
+  "material_id": "M01",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "task_status": "incomplete",
+  "review_status": "not_checked",
+  "risk_reasons": [],
+  "requested_start": "2027-04-10T20:00:00+08:00",
+  "suggested_start": null,
+  "pending_confirmations": [],
+  "draft": {
+    "save_status": "not_attempted",
+    "draft_id": null,
+    "message": "未尝试保存草稿。"
+  },
+  "publication_status": "not_saved",
+  "message": "已达到模型步数上限，任务未完成。",
+  "usage": {
+    "model_steps": 1,
+    "tool_calls": 1
+  },
+  "termination_reason": "model_step_limit"
+}

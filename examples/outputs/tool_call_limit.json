@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "tool_call_limit",
+  "request_id": "REQ-TOOL-LIMIT-001",
+  "material_id": "M01",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "task_status": "incomplete",
+  "review_status": "passed",
+  "risk_reasons": [],
+  "requested_start": "2027-04-10T20:00:00+08:00",
+  "suggested_start": null,
+  "pending_confirmations": [],
+  "draft": {
+    "save_status": "not_attempted",
+    "draft_id": null,
+    "message": "未尝试保存草稿。"
+  },
+  "publication_status": "not_saved",
+  "message": "已达到工具调用次数上限，任务未完成。",
+  "usage": {
+    "model_steps": 2,
+    "tool_calls": 2
+  },
+  "termination_reason": "tool_call_limit"
+}

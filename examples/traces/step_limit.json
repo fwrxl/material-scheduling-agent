@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "step_limit",
+  "request_id": "REQ-STEP-LIMIT-001",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "mock_boundary": "脚本化流程桩，仅验证工具和状态链路，不证明真实模型决策效果。",
+  "limits": {
+    "max_steps": 1,
+    "max_tool_calls": 8
+  },
+  "steps": [
+    {
+      "step": 1,
+      "decision_basis": "需要先读取素材，确认后续审核对象。",
+      "action": "get_material",
+      "tool_arguments": {
+        "material_id": "M01"
+      },
+      "observation_summary": "已读取素材 M01。",
+      "tool_result": {
+        "ok": true,
+        "material": {
+          "material_id": "M01",
+          "title": "春季新品功能介绍",
+          "owner": "content-a",
+          "duration_seconds": 30,
+          "source": "synthetic-product-brief-v1",
+          "content_labels": [
+            "product_demo"
+          ]
+        }
+      },
+      "next_action": "stop:model_step_limit"
+    }
+  ],
+  "termination": {
+    "reason": "model_step_limit",
+    "message": "已达到模型步数上限，任务未完成。"
+  },
+  "task_status": "incomplete"
+}

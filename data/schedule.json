@@ -1,0 +1,19 @@
+{
+  "slots": [
+    {
+      "start": "2027-04-10T18:00:00+08:00",
+      "status": "occupied",
+      "occupied_by": "EXISTING-01"
+    },
+    {
+      "start": "2027-04-10T19:00:00+08:00",
+      "status": "available",
+      "occupied_by": null
+    },
+    {
+      "start": "2027-04-10T20:00:00+08:00",
+      "status": "available",
+      "occupied_by": null
+    }
+  ]
+}

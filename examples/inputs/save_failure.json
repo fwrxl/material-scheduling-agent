@@ -1,0 +1,12 @@
+{
+  "scenario_id": "save_failure",
+  "request_id": "REQ-SAVE-FAIL-001",
+  "material_id": "M06",
+  "requested_start": "2027-04-10T19:00:00+08:00",
+  "hard_time_requirement": true,
+  "max_steps": 8,
+  "max_tool_calls": 8,
+  "failures": {
+    "save_draft": "模拟存储服务不可用"
+  }
+}

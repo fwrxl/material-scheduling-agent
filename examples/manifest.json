@@ -1,0 +1,79 @@
+{
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "mock_boundary": "以下均为脚本化 Mock 的实际运行结果，只验证流程，不证明真实模型决策效果。",
+  "runs": [
+    {
+      "run": "normal",
+      "input": "inputs/normal.json",
+      "output": "outputs/normal.json",
+      "trace": "traces/normal.json",
+      "task_status": "completed",
+      "save_status": "saved"
+    },
+    {
+      "run": "missing_info",
+      "input": "inputs/missing_info.json",
+      "output": "outputs/missing_info.json",
+      "trace": "traces/missing_info.json",
+      "task_status": "blocked",
+      "save_status": "not_attempted"
+    },
+    {
+      "run": "rule_risk",
+      "input": "inputs/rule_risk.json",
+      "output": "outputs/rule_risk.json",
+      "trace": "traces/rule_risk.json",
+      "task_status": "blocked",
+      "save_status": "not_attempted"
+    },
+    {
+      "run": "slot_conflict",
+      "input": "inputs/slot_conflict.json",
+      "output": "outputs/slot_conflict.json",
+      "trace": "traces/slot_conflict.json",
+      "task_status": "waiting_confirmation",
+      "save_status": "saved"
+    },
+    {
+      "run": "duplicate_first",
+      "input": "inputs/duplicate.json",
+      "output": "outputs/duplicate_first.json",
+      "trace": "traces/duplicate_first.json",
+      "task_status": "completed",
+      "save_status": "saved"
+    },
+    {
+      "run": "duplicate_second",
+      "input": "inputs/duplicate.json",
+      "output": "outputs/duplicate_second.json",
+      "trace": "traces/duplicate_second.json",
+      "task_status": "completed",
+      "save_status": "duplicate"
+    },
+    {
+      "run": "save_failure",
+      "input": "inputs/save_failure.json",
+      "output": "outputs/save_failure.json",
+      "trace": "traces/save_failure.json",
+      "task_status": "failed",
+      "save_status": "failed"
+    },
+    {
+      "run": "step_limit",
+      "input": "inputs/step_limit.json",
+      "output": "outputs/step_limit.json",
+      "trace": "traces/step_limit.json",
+      "task_status": "incomplete",
+      "save_status": "not_attempted"
+    },
+    {
+      "run": "tool_call_limit",
+      "input": "inputs/tool_call_limit.json",
+      "output": "outputs/tool_call_limit.json",
+      "trace": "traces/tool_call_limit.json",
+      "task_status": "incomplete",
+      "save_status": "not_attempted"
+    }
+  ]
+}

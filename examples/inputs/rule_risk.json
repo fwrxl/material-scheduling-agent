@@ -1,0 +1,9 @@
+{
+  "scenario_id": "rule_risk",
+  "request_id": "REQ-RISK-001",
+  "material_id": "M03",
+  "requested_start": "2027-04-10T19:00:00+08:00",
+  "hard_time_requirement": true,
+  "max_steps": 8,
+  "max_tool_calls": 8
+}

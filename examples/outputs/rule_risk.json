@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "rule_risk",
+  "request_id": "REQ-RISK-001",
+  "material_id": "M03",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "task_status": "blocked",
+  "review_status": "blocked",
+  "risk_reasons": [
+    {
+      "rule_id": "R01",
+      "message": "包含未证实的医疗或功效宣传，禁止进入发布排期。",
+      "severity": "block"
+    }
+  ],
+  "requested_start": "2027-04-10T19:00:00+08:00",
+  "suggested_start": null,
+  "pending_confirmations": [],
+  "draft": {
+    "save_status": "not_attempted",
+    "draft_id": null,
+    "message": "未尝试保存草稿。"
+  },
+  "publication_status": "not_saved",
+  "message": "素材命中阻断规则，未保存排期草稿。",
+  "usage": {
+    "model_steps": 3,
+    "tool_calls": 3
+  },
+  "termination_reason": "finished"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "tool_call_limit",
+  "request_id": "REQ-TOOL-LIMIT-001",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "mock_boundary": "脚本化流程桩，仅验证工具和状态链路，不证明真实模型决策效果。",
+  "limits": {
+    "max_steps": 8,
+    "max_tool_calls": 2
+  },
+  "steps": [
+    {
+      "step": 1,
+      "decision_basis": "需要先读取素材，确认后续审核对象。",
+      "action": "get_material",
+      "tool_arguments": {
+        "material_id": "M01"
+      },
+      "observation_summary": "已读取素材 M01。",
+      "tool_result": {
+        "ok": true,
+        "material": {
+          "material_id": "M01",
+          "title": "春季新品功能介绍",
+          "owner": "content-a",
+          "duration_seconds": 30,
+          "source": "synthetic-product-brief-v1",
+          "content_labels": [
+            "product_demo"
+          ]
+        }
+      },
+      "next_action": "check_rules"
+    },
+    {
+      "step": 2,
+      "decision_basis": "素材已读取，继续检查必填字段和审核规则。",
+      "action": "check_rules",
+      "tool_arguments": {
+        "material_id": "M01"
+      },
+      "observation_summary": "审核状态 passed；缺失字段 []；风险数 0。",
+      "tool_result": {
+        "ok": true,
+        "review_status": "passed",
+        "missing_fields": [],
+        "risks": []
+      },
+      "next_action": "stop:tool_call_limit"
+    }
+  ],
+  "termination": {
+    "reason": "tool_call_limit",
+    "message": "已达到工具调用次数上限，任务未完成。"
+  },
+  "task_status": "incomplete"
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "slot_conflict",
+  "request_id": "REQ-CONFLICT-001",
+  "material_id": "M04",
+  "requested_start": "2027-04-10T18:00:00+08:00",
+  "hard_time_requirement": true,
+  "max_steps": 8,
+  "max_tool_calls": 8
+}

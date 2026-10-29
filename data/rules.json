@@ -1,0 +1,11 @@
+{
+  "required_fields": ["title", "owner", "duration_seconds", "source"],
+  "rules": [
+    {
+      "rule_id": "R01",
+      "label": "unverified_medical_claim",
+      "severity": "block",
+      "message": "包含未证实的医疗或功效宣传，禁止进入发布排期。"
+    }
+  ]
+}

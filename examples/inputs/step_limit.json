@@ -1,0 +1,9 @@
+{
+  "scenario_id": "step_limit",
+  "request_id": "REQ-STEP-LIMIT-001",
+  "material_id": "M01",
+  "requested_start": "2027-04-10T20:00:00+08:00",
+  "hard_time_requirement": true,
+  "max_steps": 1,
+  "max_tool_calls": 8
+}

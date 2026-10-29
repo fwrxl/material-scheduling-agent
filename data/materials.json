@@ -1,0 +1,52 @@
+{
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": "春季新品功能介绍",
+      "owner": "content-a",
+      "duration_seconds": 30,
+      "source": "synthetic-product-brief-v1",
+      "content_labels": ["product_demo"]
+    },
+    {
+      "material_id": "M02",
+      "title": "缺少负责人的素材",
+      "owner": null,
+      "duration_seconds": 30,
+      "source": "synthetic-product-brief-v1",
+      "content_labels": ["product_demo"]
+    },
+    {
+      "material_id": "M03",
+      "title": "含未证实功效宣传的素材",
+      "owner": "content-b",
+      "duration_seconds": 25,
+      "source": "synthetic-campaign-brief-v1",
+      "content_labels": ["unverified_medical_claim"]
+    },
+    {
+      "material_id": "M04",
+      "title": "需要调整时段的素材",
+      "owner": "content-c",
+      "duration_seconds": 40,
+      "source": "synthetic-product-brief-v2",
+      "content_labels": ["product_demo"]
+    },
+    {
+      "material_id": "M05",
+      "title": "用于重复提交的素材",
+      "owner": "content-d",
+      "duration_seconds": 20,
+      "source": "synthetic-product-brief-v1",
+      "content_labels": ["product_demo"]
+    },
+    {
+      "material_id": "M06",
+      "title": "用于保存失败演练的素材",
+      "owner": "content-e",
+      "duration_seconds": 35,
+      "source": "synthetic-product-brief-v2",
+      "content_labels": ["product_demo"]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "missing_info",
+  "request_id": "REQ-MISSING-001",
+  "material_id": "M02",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "task_status": "blocked",
+  "review_status": "incomplete",
+  "risk_reasons": [
+    {
+      "rule_id": "MISSING_FIELDS",
+      "message": "缺少必填字段：owner",
+      "severity": "incomplete"
+    }
+  ],
+  "requested_start": "2027-04-10T20:00:00+08:00",
+  "suggested_start": null,
+  "pending_confirmations": [],
+  "draft": {
+    "save_status": "not_attempted",
+    "draft_id": null,
+    "message": "未尝试保存草稿。"
+  },
+  "publication_status": "not_saved",
+  "message": "素材信息不足，请补充缺失字段后重试。",
+  "usage": {
+    "model_steps": 3,
+    "tool_calls": 3
+  },
+  "termination_reason": "finished"
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "normal",
+  "request_id": "REQ-NORMAL-001",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "mock_boundary": "脚本化流程桩，仅验证工具和状态链路，不证明真实模型决策效果。",
+  "limits": {
+    "max_steps": 8,
+    "max_tool_calls": 8
+  },
+  "steps": [
+    {
+      "step": 1,
+      "decision_basis": "需要先读取素材，确认后续审核对象。",
+      "action": "get_material",
+      "tool_arguments": {
+        "material_id": "M01"
+      },
+      "observation_summary": "已读取素材 M01。",
+      "tool_result": {
+        "ok": true,
+        "material": {
+          "material_id": "M01",
+          "title": "春季新品功能介绍",
+          "owner": "content-a",
+          "duration_seconds": 30,
+          "source": "synthetic-product-brief-v1",
+          "content_labels": [
+            "product_demo"
+          ]
+        }
+      },
+      "next_action": "check_rules"
+    },
+    {
+      "step": 2,
+      "decision_basis": "素材已读取，继续检查必填字段和审核规则。",
+      "action": "check_rules",
+      "tool_arguments": {
+        "material_id": "M01"
+      },
+      "observation_summary": "审核状态 passed；缺失字段 []；风险数 0。",
+      "tool_result": {
+        "ok": true,
+        "review_status": "passed",
+        "missing_fields": [],
+        "risks": []
+      },
+      "next_action": "query_slots"
+    },
+    {
+      "step": 3,
+      "decision_basis": "审核通过，查询用户要求时段及替代时段。",
+      "action": "query_slots",
+      "tool_arguments": {
+        "requested_start": "2027-04-10T19:00:00+08:00"
+      },
+      "observation_summary": "要求时段可用。",
+      "tool_result": {
+        "ok": true,
+        "requested_start": "2027-04-10T19:00:00+08:00",
+        "requested_available": true,
+        "occupied_by": null,
+        "alternatives": [
+          "2027-04-10T20:00:00+08:00"
+        ]
+      },
+      "next_action": "save_draft"
+    },
+    {
+      "step": 4,
+      "decision_basis": "要求时段可用，保持用户的硬性发布时间。",
+      "action": "save_draft",
+      "tool_arguments": {
+        "request_id": "REQ-NORMAL-001",
+        "material_id": "M01",
+        "requested_start": "2027-04-10T19:00:00+08:00",
+        "suggested_start": "2027-04-10T19:00:00+08:00"
+      },
+      "observation_summary": "草稿已保存。 草稿 ID：DRAFT-27a765acdeee。",
+      "tool_result": {
+        "ok": true,
+        "status": "saved",
+        "draft": {
+          "request_id": "REQ-NORMAL-001",
+          "material_id": "M01",
+          "requested_start": "2027-04-10T19:00:00+08:00",
+          "suggested_start": "2027-04-10T19:00:00+08:00",
+          "review_status": "passed",
+          "confirmation_status": "not_required",
+          "publish_status": "draft_only",
+          "draft_id": "DRAFT-27a765acdeee",
+          "created_at": "2026-10-29T11:38:07.185034+00:00"
+        },
+        "save_status": "saved",
+        "message": "草稿已保存。"
+      },
+      "next_action": "finish"
+    },
+    {
+      "step": 5,
+      "decision_basis": "已观察保存结果，如实结束任务。",
+      "action": "finish",
+      "tool_arguments": {
+        "summary": "原要求时段的排期草稿已保存，无需额外确认。"
+      },
+      "observation_summary": "模型选择结束任务。",
+      "tool_result": {
+        "ok": true,
+        "status": "finished"
+      },
+      "next_action": "end"
+    }
+  ],
+  "termination": {
+    "reason": "finished",
+    "message": "模型选择结束。"
+  },
+  "task_status": "completed"
+}

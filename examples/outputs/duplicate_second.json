@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "duplicate",
+  "request_id": "REQ-DUPLICATE-001",
+  "material_id": "M05",
+  "agent_mode": "mock",
+  "real_model_decisions": false,
+  "task_status": "completed",
+  "review_status": "passed",
+  "risk_reasons": [],
+  "requested_start": "2027-04-10T20:00:00+08:00",
+  "suggested_start": "2027-04-10T20:00:00+08:00",
+  "pending_confirmations": [],
+  "draft": {
+    "save_status": "duplicate",
+    "draft_id": "DRAFT-fccc9835f18a",
+    "message": "重复请求，返回原草稿。"
+  },
+  "publication_status": "draft_only",
+  "message": "排期草稿已保存；未执行发布。",
+  "usage": {
+    "model_steps": 5,
+    "tool_calls": 5
+  },
+  "termination_reason": "finished"
+}
